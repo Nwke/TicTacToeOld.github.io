@@ -3,10 +3,6 @@
  */
 
 
-/**
- * Created by Denis on 29.07.2017.
- */
-
 
 let table = document.querySelector('table');
 let playerMark = 0;
