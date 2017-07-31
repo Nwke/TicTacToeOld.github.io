@@ -21,14 +21,14 @@ function elementCheck(e) {
 }
 
 function checkMark(element) {
-	if ( !element.classList.contains('zero') && !element.classList.contains('cross') ) {
+	if ( !element.classList.contains('Love') && !element.classList.contains('Cloud') ) {
 
 		switch ( playerMark % 2 ) {
 			case 0:
-				putMark(element,'zero');
+				putMark(element,'Love');
 				break;
 			case 1:
-				putMark(element,'cross');
+				putMark(element,'Cloud');
 				break;
 		}
 	}
@@ -46,26 +46,39 @@ function putMark(element,nameClass) {
 
 function checkWinner() {
 	let allCell = document.querySelectorAll('div');
-	let classCross = 'cross';
-	let classZero = 'zero';
+	let classCloud = 'Cloud';
+	let classLove = 'Love';
 
-	if ( allCell[0].classList.contains(classZero) && allCell[1].classList.contains(classZero) && allCell[2].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[0].classList.contains(classZero) && allCell[3].classList.contains(classZero) && allCell[6].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[0].classList.contains(classZero) && allCell[4].classList.contains(classZero) && allCell[8].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[1].classList.contains(classZero) && allCell[4].classList.contains(classZero) && allCell[7].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[2].classList.contains(classZero) && allCell[4].classList.contains(classZero) && allCell[6].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[2].classList.contains(classZero) && allCell[5].classList.contains(classZero) && allCell[8].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[3].classList.contains(classZero) && allCell[4].classList.contains(classZero) && allCell[5].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
-	else if ( allCell[6].classList.contains(classZero) && allCell[7].classList.contains(classZero) && allCell[8].classList.contains(classZero) ) setTimeout(winZero('Zero', allCell),50);
+	if ( allCell[0].classList.contains(classLove) && allCell[1].classList.contains(classLove) && allCell[2].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[0].classList.contains(classLove) && allCell[3].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[0].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[1].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[7].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[2].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[2].classList.contains(classLove) && allCell[5].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[3].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[5].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	else if ( allCell[6].classList.contains(classLove) && allCell[7].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
 
-	else if ( allCell[0].classList.contains(classCross) && allCell[1].classList.contains(classCross) && allCell[2].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[0].classList.contains(classCross) && allCell[3].classList.contains(classCross) && allCell[6].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[0].classList.contains(classCross) && allCell[4].classList.contains(classCross) && allCell[8].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[1].classList.contains(classCross) && allCell[4].classList.contains(classCross) && allCell[7].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[2].classList.contains(classCross) && allCell[4].classList.contains(classCross) && allCell[6].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[2].classList.contains(classCross) && allCell[5].classList.contains(classCross) && allCell[8].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[3].classList.contains(classCross) && allCell[4].classList.contains(classCross) && allCell[5].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
-	else if ( allCell[6].classList.contains(classCross) && allCell[7].classList.contains(classCross) && allCell[8].classList.contains(classCross) ) setTimeout(winZero('Cross', allCell),50);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[1].classList.contains(classCloud) && allCell[2].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[3].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[1].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[2].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[2].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[3].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[6].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+
+	checkTie(allCell);
+}
+
+
+function checkTie(ArrayElements) {
+	let arrayElems = ArrayElements;
+	let flagTie = true;
+	for ( let count = 0,lenArr = arrayElems.length; count < lenArr; count++ ) {
+		if ( !arrayElems[count].classList.contains('Love') && !arrayElems[count].classList.contains('Cloud') )
+			flagTie = false;
+	}
+	if ( flagTie ) winZero('Tie', arrayElems);
 }
 
 function winZero(playWon,array) {
@@ -79,7 +92,7 @@ function winZero(playWon,array) {
 function cleanClasses(ArrayElements) {
 	let arrayElems = ArrayElements;
 	for ( let count = 0,lenArr = arrayElems.length; count < lenArr; count++ ) {
-		arrayElems[count].classList.remove('zero');
-		arrayElems[count].classList.remove('cross');
+		arrayElems[count].classList.remove('Love');
+		arrayElems[count].classList.remove('Cloud');
 	}
 }
