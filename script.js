@@ -14,7 +14,7 @@ let playerMark = 0;
 table.addEventListener('click', elementCheck);
 
 function elementCheck(e) {
-	console.log(e.target,e.target.parentElement);
+//	console.log(e.target,e.target.parentElement);
 	if ( e.target.parentElement.tagName === 'TD' ) {
 		checkMark(e.target);
 	}
