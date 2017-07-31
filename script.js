@@ -10,7 +10,8 @@ let playerMark = 0;
 table.addEventListener('click', elementCheck);
 
 function elementCheck(e) {
-//	console.log(e.target,e.target.parentElement);
+	console.log(e.target,e.target.parentElement);
+
 	if ( e.target.parentElement.tagName === 'TD' ) {
 		checkMark(e.target);
 	}
@@ -41,29 +42,30 @@ function putMark(element,nameClass) {
 
 
 function checkWinner() {
-	let allCell = document.querySelectorAll('div');
+	let allCell = table.querySelectorAll('div');
 	let classCloud = 'Cloud';
 	let classLove = 'Love';
+	console.log('check');
 
-	if ( allCell[0].classList.contains(classLove) && allCell[1].classList.contains(classLove) && allCell[2].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[0].classList.contains(classLove) && allCell[3].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[0].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[1].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[7].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[2].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[2].classList.contains(classLove) && allCell[5].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[3].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[5].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
-	else if ( allCell[6].classList.contains(classLove) && allCell[7].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) setTimeout(winZero('Love', allCell),50);
+	if ( allCell[0].classList.contains(classLove) && allCell[1].classList.contains(classLove) && allCell[2].classList.contains(classLove) )      winZero('Love', allCell);
+	else if ( allCell[0].classList.contains(classLove) && allCell[3].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[0].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[1].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[7].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[2].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[6].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[2].classList.contains(classLove) && allCell[5].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[3].classList.contains(classLove) && allCell[4].classList.contains(classLove) && allCell[5].classList.contains(classLove) ) winZero('Love', allCell);
+	else if ( allCell[6].classList.contains(classLove) && allCell[7].classList.contains(classLove) && allCell[8].classList.contains(classLove) ) winZero('Love', allCell);
 
-	else if ( allCell[0].classList.contains(classCloud) && allCell[1].classList.contains(classCloud) && allCell[2].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[0].classList.contains(classCloud) && allCell[3].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[0].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[1].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[2].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[2].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[3].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
-	else if ( allCell[6].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) setTimeout(winZero('Cloud', allCell),50);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[1].classList.contains(classCloud) && allCell[2].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[3].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[0].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[1].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[2].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[6].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[2].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[3].classList.contains(classCloud) && allCell[4].classList.contains(classCloud) && allCell[5].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else if ( allCell[6].classList.contains(classCloud) && allCell[7].classList.contains(classCloud) && allCell[8].classList.contains(classCloud) ) winZero('Cloud', allCell);
+	else checkTie(allCell)
 
-	checkTie(allCell);
 }
 
 
@@ -78,6 +80,7 @@ function checkTie(ArrayElements) {
 }
 
 function winZero(playWon,array) {
+	console.log('winZero');
 	setTimeout(function () {
 		alert(`${playWon} won!`);
 		cleanClasses(array);
